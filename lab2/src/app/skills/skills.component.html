@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row justify-content-center">
+       <h1 class="m-2">skills</h1>
+    </div>
+    <div class="row justify-content-center m-2">
+       
+        <p>I'm a front-end designer and developer trainee at ITI, i know HTML,CSS and bootstrap to make responsive web
+            site's pages with angular and react technologies and also i'm a data analyst </p>
+       
+    </div>
+    <div class="row justify-content-center m-2">
+       <div class="col-4 ">
+         <h4>My focus</h4>
+         <hr>
+         <ul >
+           <li *ngFor="let skill of myskills">
+           {{skill}}
+           </li>
+         </ul>
+       </div>
+       <div class="col-8 mb-2">
+        <div >
+              <h5>arabic</h5>
+              <div class="progress">
+                
+                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <br>
+              <h5>communication skills</h5>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <br>
+              <h5>english</h5>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <br>
+              <h5>germany</h5>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+        </div>
+    </div>
+     </div>
+    </div>
+    
