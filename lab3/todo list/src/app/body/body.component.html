@@ -1,0 +1,22 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand">My ToDo list</a>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-secondary" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  
+<input  #thing type="text"  aria-label="Sizing example input" placeholder="enter your todo item">
+<button class="btn-btn-primary" (click)="add(thing)">add item</button>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let todo of mylist; let i = index">
+        <app-todo
+        [Item] ="todo"
+        (senditem)="recieveitem($event)"
+       ></app-todo>
+    </div>
+  </div>
+  
+
