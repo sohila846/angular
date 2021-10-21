@@ -1,0 +1,60 @@
+<div class="container m-0auto">
+    <form #loginForm="ngForm" (ngSubmit)="submitForm(loginForm)">
+        <div class="mb-3">
+          <label for="useremailID" class="form-label">email</label>
+          <input
+           (change)="inchange(useremail)"
+            type="text"
+            class="form-control"
+            id="useremailID"
+            name="useremail"
+            #useremail="ngModel"
+            ngModel
+            required
+            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+          />
+        </div>
+        <div
+    *ngIf="
+      (useremail.touched && !useremail.valid) ||
+      (loginForm.submitted && !useremail.valid)
+    "
+  >
+    <small class="text-danger" *ngIf="useremail.errors?.required"
+      >Required</small
+    >
+    <small class="text-danger" *ngIf="useremail.errors?.pattern"
+    >invalid email format</small
+  >
+  </div>
+      
+        <div class="mb-3">
+            <label for="passwordID" class="form-label">password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="passwordID"
+              name="password"
+              #password="ngModel"
+              ngModel
+              required
+            />
+          </div>
+          <div
+    *ngIf="
+      (password.touched && !password.valid) ||
+      (loginForm.submitted && !password.valid)
+    "
+  >
+    <small class="text-danger" *ngIf="password.errors?.required"
+      >Required</small
+    >
+   
+  
+  </div>
+      
+        <button type="submit" class="btn btn-primary my-5">Submit</button>
+      </form>
+      <h4>dont't have acount</h4>
+      <button (click)="onclick()">register</button>
+</div>
