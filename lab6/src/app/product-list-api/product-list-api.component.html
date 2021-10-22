@@ -1,0 +1,18 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let products of Product">
+        <div class="card h-100">
+            <img [src]="products.image" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ products.title }}</h5>
+              <p class="card-text">{{ products.category }}</p>
+              <p class="card-text">{{ products.price|  currency:'EGP'}} </p>
+              <button class="btn-btn-primary"(click)="selectproduct(products.id)">Select product</button>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">{{ products.rating.count_in_stock| checkcount}}</small>
+                <button class="btn-btn-primary"(click)="increaseCounter()">add</button>
+              </div>
+          </div>
+         
+    </div>
+  </div>
