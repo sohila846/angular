@@ -1,0 +1,26 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">name</th>
+        <th scope="col">price</th>
+        <th scope="col">quantity</th>
+        <th scope="col">description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of (products|async)">
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.description}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+  <button (click)="addNewMovie()">Add new movie</button>
+
+<button (click)="updateMovie()">Update movie</button>
+
+<button (click)="deleteMovie()">Delete movie</button>

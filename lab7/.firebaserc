@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lab2-7dd41": {
+      "hosting": {
+        "firestore-with-loader": [
+          "lab2-7dd41"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lab2-7dd41"
+  }
+}
